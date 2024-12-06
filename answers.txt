@@ -1,0 +1,69 @@
+create table Exam (
+PRN int not null,
+Name varchar(20) not null,
+course varchar(50) not null,
+center Varchar(20) 
+PRIMARY KEY (PRN)
+);
+
+
+
+insert into Exam(PRN ,Name ,course ,center)
+values(1 , 'Harshardhan Kakade' , 'Java Programming', 'Karad');
+
+
+insert into Exam(PRN ,Name ,course ,center)
+values(2 , 'Saurabh Kanase' , 'Mca', 'Pune');
+
+
+insert into Exam(PRN ,Name ,course ,center)
+values(3 , 'Prasann Kulkarni ' , 'Bca', 'Sangali');
+
+
+
+insert into Exam(PRN ,Name ,course ,center)
+values(4, 'Pratik Jadhav' , 'Msc', 'Mumbai');
+
+
+
+insert into Exam(PRN ,Name ,course ,center)
+values( 5, 'Siddhant Patil' , 'Bsc', 'Karad');
+
+
+select * from Exam;
+
+select * from Exam where center = 'Karad';
+
+select count(center)
+from Exam 
+where  center = 'Mumbai';
+
+
+
+
+
+
+Qurestion  number 1
+
+
+
+DECLARE
+	
+	num NUMBER(3) := 1; 
+	sum1 NUMBER(4) := 150; 
+BEGIN
+	WHILE num <= 150 LOOP 
+		
+		dbms_output.Put_line(num); 
+
+		
+		sum1 := sum1 + num; 
+
+		
+		num := num + 2; 
+
+	
+	END LOOP; 
+dbms_output.Put_line('Sum of all odd numbers is '|| sum1); 
+END; 
+
